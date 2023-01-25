@@ -1761,6 +1761,7 @@ QString qSlicerCoreApplication::copyrights()const
 //-----------------------------------------------------------------------------
 QString qSlicerCoreApplication::acknowledgment()const
 {
+  //: %1 is a website link
   QString acknowledgmentText(
     tr("Slicer is NOT an FDA approved medical device.<br><br>"
     "Supported by: NA-MIC, NAC, BIRN, NCIGT and the Slicer Community.<br><br>"
@@ -1768,8 +1769,9 @@ QString qSlicerCoreApplication::acknowledgment()const
     "This work is part of the National Alliance for Medical Image Computing "
     "(NA-MIC), funded by the National Institutes of Health through the NIH "
     "Roadmap for Medical Research, Grant U54 EB005149. Information on the "
-    "National Centers for Biomedical Computing can be obtained from"
-    "<a href=\"https://commonfund.nih.gov/bioinformatics\">https://commonfund.nih.gov/bioinformatics</a>.<br><br>"));
+    "National Centers for Biomedical Computing can be obtained from %1")
+    .arg("<a href=\"https://commonfund.nih.gov/bioinformatics\">https://commonfund.nih.gov/bioinformatics</a>.<br><br>")
+  );
   return acknowledgmentText;
 }
 
